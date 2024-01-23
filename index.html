@@ -4,9 +4,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-
+$('#addTask').on('click',function){
+var newTask = $('#newTask').val();
+if(newTask!==''){
+$('#taskList').append('<li><span>'+ newTask+'</span><button class="delete">Delete</button></li>');
+$('#newTask').val('');
 
 }
+});
+$('#taskList').on('click','.delete',function(){
+
+$(this).closest('li').remove();
+});
+});
+
 </script>
 <style>
   body{
