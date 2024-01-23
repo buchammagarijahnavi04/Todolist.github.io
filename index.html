@@ -7,12 +7,12 @@ $(document).ready(function(){
    $('#addTask').on('click', function(){
      var newTask = $('#newTask').val();
      if(newTask !== ''){
-     $('#taskList').append('<li><span>' + newTask + '</span><button class="delete">Delete</button></li>');
-     $('#newTask').val('');
+         $('#taskList').append('<li><span>' + newTask + '</span><button class="delete">Delete</button></li>');
+        $('#newTask').val('');
   }
 });
-       $('#taskList').on('click','.delete',function(){
-       $(this).closest('li').remove();
+$('#taskList').on('click','.delete',function(){
+$(this).closest('li').remove();
 });
 });
 
